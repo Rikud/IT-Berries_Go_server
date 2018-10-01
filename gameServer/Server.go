@@ -14,20 +14,20 @@ type GameServer struct {
 }
 
 func (s *GameServer) bindHandlers() {
-	for path, handle := range controllers.Handlers{
+	for path, handle := range controllers.Handlers {
 		s.router.Handle(path, handle)
 	}
 }
 
-func (s *GameServer) Prepare () {
+func (s *GameServer) Prepare() {
 	s.router = mux.NewRouter()
 	s.bindHandlers()
 }
 
 func (s *GameServer) Start() {
 	s.server = &http.Server{
-		Handler:      s.router,
-		Addr:         "127.0.0.1:8000",
+		Handler: s.router,
+		Addr:    "127.0.0.1:8000",
 		// Good practice: enforce timeouts for servers you create!
 		WriteTimeout: 15 * time.Second,
 		ReadTimeout:  15 * time.Second,

@@ -1,16 +1,14 @@
 package models
 
 type LoginForm struct {
-	email string
+	email    string
 	password string
 }
 
-func (f LoginForm)getPassword() string {
+func (f LoginForm) GetPassword() string {
 	return f.password
 }
 
-func (f LoginForm)getEmail() string {
+func (f LoginForm) GetEmail() string {
 	return f.email
 }
-
-
