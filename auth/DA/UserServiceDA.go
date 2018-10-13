@@ -1,54 +1,55 @@
 package DA
 
 import (
-	"IT-Berries/auth/entities"
+	"IT-Berries_Go_server/auth/models"
 	"database/sql"
-	"fmt"
+	_ "github.com/lib/pq"
 	"log"
 )
 
-const (
-	host     = "localhost"
-	port     = 5432
-	user     = "postgres"
-	password = "root"
-	dbname   = "it_berries"
-
-	connectError = "An error occurred while trying to connect to the database."
-	pignError    = "An error occurred while trying to ping database"
-	executeError = "An error occurred while trying to execute query."
-	readRowError = "An error occurred while trying to read row"
-)
-
-var psqlInfo string
-
-func init() {
-	psqlInfo = fmt.Sprintf("host=%s port=%d user=%s "+
-		"password=%s dbname=%s sslmode=disable",
-		host, port, user, password, dbname)
+func FindUserByEmail(email string) []*models.User {
 	db := connect()
 	defer db.Close()
-	err := db.Ping()
-	errorCheck(err, pignError)
-	fmt.Println("Successfully connected to database.")
-
-}
-
-func FindUserByEmail(email string) []*entities.User {
-	db := connect()
-	defer db.Close()
-	rows, err := db.Query("SELECT * FROM USERS_ WHERE email = $1", email)
+	rows, err := db.Query("SELECT * FROM users WHERE email = $1", email)
 	errorCheck(err, executeError)
 	defer rows.Close()
-	users := make([]*entities.User, 0)
+	users := make([]*models.User, 0)
 	for rows.Next() {
-		user := new(entities.User)
-		err := rows.Scan(user.GetAvatarPoint(), user.GetEmailPoint(), user.GetPasswordPoint(), user.GetUsernamePoint())
+		user := new(models.User)
+		err := rows.Scan(user.GetIdPoint(), user.GetAvatarPoint(), user.GetEmailPoint(), user.GetPasswordPoint(), user.GetUsernamePoint())
 		errorCheck(err, readRowError)
 		users = append(users, user)
 	}
 	errorCheck(rows.Err(), readRowError)
 	return users
+}
+
+func FindUserById(userId int) []*models.User {
+	db := connect()
+	defer db.Close()
+	rows, err := db.Query("SELECT * FROM users WHERE user_id = $1", userId)
+	errorCheck(err, executeError)
+	defer rows.Close()
+	users := make([]*models.User, 0)
+	for rows.Next() {
+		user := new(models.User)
+		err := rows.Scan(user.GetIdPoint(), user.GetAvatarPoint(), user.GetEmailPoint(), user.GetPasswordPoint(), user.GetUsernamePoint())
+		errorCheck(err, readRowError)
+		users = append(users, user)
+	}
+	errorCheck(rows.Err(), readRowError)
+	return users
+}
+
+func AddUser(user models.User) int64 {
+	db := connect()
+	defer db.Close()
+	result, err := db.Exec("insert into users (avatar, email, password, user_name) values ($1, $2, $3, $4)",
+		user.GetAvatar(), user.GetEmail(), user.GetPassword(), user.GetUsername())
+	errorCheck(err, executeError)
+	id, err := result.RowsAffected()
+	errorCheck(err, idExtracionError)
+	return id
 }
 
 func errorCheck(err error, message string) {

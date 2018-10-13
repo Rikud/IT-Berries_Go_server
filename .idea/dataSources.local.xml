@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="it_berries@localhost" uuid="5abd7239-1192-466e-be44-380d1b47d92f">
+      <database-info product="PostgreSQL" version="9.5.14" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.2" family="POSTGRES" exact-version="9.5.14">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>it_berries</user-name>
+      <introspection-schemas>*:*|@:|docker:|it-berries:|it_berries:*|postgres:|test_lower:</introspection-schemas>
+    </data-source>
+  </component>
+</project>

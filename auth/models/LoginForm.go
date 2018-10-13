@@ -1,14 +1,14 @@
 package models
 
 type LoginForm struct {
-	email    string
-	password string
+	Email    string
+	Password string
 }
 
 func (f LoginForm) GetPassword() string {
-	return f.password
+	return f.Password
 }
 
 func (f LoginForm) GetEmail() string {
-	return f.email
+	return f.Email
 }

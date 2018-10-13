@@ -5,18 +5,18 @@ import (
 	"log"
 )
 
-func HashPassword(password string) (string, error) {
+func HashPassword(password string) (string) {
 	hash, err := bcrypt.GenerateFromPassword([]byte(password), bcrypt.MinCost)
 	if err != nil {
 		log.Println(err)
+		panic(err)
 	}
-	return string(hash), err
+	return string(hash)
 }
 
 func ComparePasswords(dbHash string, password string) bool {
-	plainHash := []byte(password)
 	hashedPassword := []byte(dbHash)
-	err := bcrypt.CompareHashAndPassword(hashedPassword, plainHash)
+	err := bcrypt.CompareHashAndPassword(hashedPassword, []byte(password))
 	if err != nil {
 		log.Println(err)
 		return false
