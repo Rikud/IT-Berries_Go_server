@@ -31,13 +31,19 @@ type LoginHandle struct{}
 type RegistrationHandle struct{}
 type MeHandle struct{}
 type ScoreboardHandle struct{}
-type LogOut struct {}
+type LogOutHandle struct {}
+type AvatarHandle struct{}
+
+func (AvatarHandle) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	http.ServeFile(w, r, "/app/avatars/" + string(r.URL.Query()["avatar"][0]))
+}
+
 type EntryScore struct {
 	Scorelist []*models.ScoreRecord `json:"scorelist"`
 	Length int `json:"length"`
 }
 
-func (handle LogOut) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+func (LogOutHandle) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	defer func() {
 		if rec := recover(); rec != nil {
 			log.Println("Log out failed.", rec)
@@ -55,7 +61,7 @@ func (handle LogOut) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 }
 
-func (handle LoginHandle) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+func (LoginHandle) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	defer func() {
 		if rec := recover(); rec != nil {
 			log.Println("Login failed.", rec)
@@ -87,7 +93,7 @@ func (handle LoginHandle) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func (handle RegistrationHandle) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+func (RegistrationHandle) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	defer func() {
 		if rec := recover(); rec != nil {
 			log.Println("Registration failed.", rec)
@@ -169,7 +175,7 @@ func (handle MeHandle) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func (handll MeHandle) authentication(w http.ResponseWriter, r *http.Request) {
+func (MeHandle) authentication(w http.ResponseWriter, r *http.Request) {
 	defer func() {
 		if rec := recover(); rec != nil {
 			log.Println("Registration failed.", rec)
@@ -193,7 +199,7 @@ func (handll MeHandle) authentication(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 }
 
-func (handle MeHandle) profileChange(w http.ResponseWriter, r *http.Request) {
+func (MeHandle) profileChange(w http.ResponseWriter, r *http.Request) {
 	log.Println("Trying to change user profile data.")
 	defer func() {
 		if rec := recover(); rec != nil {
@@ -283,7 +289,7 @@ func (handle MeHandle) profileChange(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 }
 
-func (handle ScoreboardHandle) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+func (ScoreboardHandle) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	page, err := strconv.Atoi(r.FormValue("listNumber"))
 	if err != nil {
 		log.Println("Page value not int")
@@ -326,7 +332,8 @@ func init() {
 	Handlers["/api/registration"] = RegistrationHandle{}
 	Handlers["/api/me"] = MeHandle{}
 	Handlers["/api/users/scoreboard"] = ScoreboardHandle{}
-	Handlers["/api/logout"] = LogOut{}
+	Handlers["/api/logout"] = LogOutHandle{}
+	Handlers["/avatar"] = AvatarHandle{}
 }
 
 func checkMethod(w http.ResponseWriter, r *http.Request) bool {
@@ -363,8 +370,8 @@ func checkAuth(r *http.Request, w http.ResponseWriter) *http.Cookie {
 }
 
 func errorResponce(w http.ResponseWriter,  errorMessage string, errorStatus int) {
-	error := &JSONError{errorMessage, errorStatus}
-	result, _ := json.Marshal(error)
+	err := &JSONError{errorMessage, errorStatus}
+	result, _ := json.Marshal(err)
 	http.Error(w, string(result), errorStatus)
 	w.WriteHeader(errorStatus)
 }
