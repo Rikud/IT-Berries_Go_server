@@ -2,18 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ab7b220-1cfd-49fe-9930-36c91f712db1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth/models/ScoreRecord.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f/storage_v2/_src_/database/it-berries.kpuulg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f/storage_v2/_src_/database/it-berries.kpuulg/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f/storage_v2/_src_/database/it-berries.kpuulg/schema/information_schema.FNRwLQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f/storage_v2/_src_/database/it-berries.kpuulg/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f/storage_v2/_src_/database/it-berries.kpuulg/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f/storage_v2/_src_/database/it-berries.kpuulg/schema/pg_temp_1.zkWuFg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f/storage_v2/_src_/database/it-berries.kpuulg/schema/pg_toast.33HYYw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f/storage_v2/_src_/database/it-berries.kpuulg/schema/pg_toast_temp_1.5ixBaA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f/storage_v2/_src_/database/it-berries.kpuulg/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f/storage_v2/_src_/database/it_berries.IF-p4A.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f/storage_v2/_src_/database/it_berries.IF-p4A.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f/storage_v2/_src_/database/it_berries.IF-p4A/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f/storage_v2/_src_/database/it_berries.IF-p4A/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f/storage_v2/_src_/database/it_berries.IF-p4A/schema/information_schema.FNRwLQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f/storage_v2/_src_/database/it_berries.IF-p4A/schema/information_schema.FNRwLQ.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f/storage_v2/_src_/database/it_berries.IF-p4A/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f/storage_v2/_src_/database/it_berries.IF-p4A/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f/storage_v2/_src_/database/it_berries.IF-p4A/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f/storage_v2/_src_/database/it_berries.IF-p4A/schema/pg_catalog.0S1ZNQ.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f/storage_v2/_src_/database/it_berries.IF-p4A/schema/pg_temp_1.zkWuFg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f/storage_v2/_src_/database/it_berries.IF-p4A/schema/pg_temp_1.zkWuFg.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f/storage_v2/_src_/database/it_berries.IF-p4A/schema/pg_toast.33HYYw.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f/storage_v2/_src_/database/it_berries.IF-p4A/schema/pg_toast.33HYYw.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f/storage_v2/_src_/database/it_berries.IF-p4A/schema/pg_toast_temp_1.5ixBaA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f/storage_v2/_src_/database/it_berries.IF-p4A/schema/pg_toast_temp_1.5ixBaA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f/storage_v2/_src_/database/it_berries.IF-p4A/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f/storage_v2/_src_/database/it_berries.IF-p4A/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_temp_1.zkWuFg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_toast.33HYYw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_toast_temp_1.5ixBaA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5abd7239-1192-466e-be44-380d1b47d92f/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/DA/HistoryServiceDA.go" beforeDir="false" afterPath="$PROJECT_DIR$/auth/DA/HistoryServiceDA.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/DA/UserServiceDA.go" beforeDir="false" afterPath="$PROJECT_DIR$/auth/DA/UserServiceDA.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/models/User.go" beforeDir="false" afterPath="$PROJECT_DIR$/auth/models/User.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/services/UserService.go" beforeDir="false" afterPath="$PROJECT_DIR$/auth/services/UserService.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/RestApiController.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/RestApiController.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,6 +55,45 @@
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="@serverDadiMishi" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="it_berries@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="it_berries@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="it_berries@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="it_berries: database" type="6d9b600a:PostgresImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="it_berries@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="it_berries: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="it_berries@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="it_berries: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="it_berries@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="it_berries: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
     </expand>
     <select />
@@ -75,25 +132,27 @@
     <session id="-1423592391">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.17" value="3" />
           <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.31" value="1" />
           <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="15" />
+          <entry key="project.opened" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="go" value="7783" />
+          <entry key="Dockerfile" value="1" />
+          <entry key="go" value="7786" />
           <entry key="html" value="4" />
           <entry key="sql" value="749" />
           <entry key="txt" value="10" />
@@ -101,7 +160,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Go" value="7783" />
+          <entry key="Dockerfile" value="1" />
+          <entry key="Go" value="7786" />
           <entry key="HTML" value="4" />
           <entry key="PLAIN_TEXT" value="10" />
           <entry key="Scratch" value="749" />
@@ -111,18 +171,18 @@
         <counts>
           <entry key="Dockerfile" value="1" />
           <entry key="dockerfile" value="1" />
-          <entry key="go" value="62" />
+          <entry key="go" value="66" />
           <entry key="html" value="1" />
           <entry key="s" value="1" />
-          <entry key="sql" value="5" />
+          <entry key="sql" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Go" value="62" />
+          <entry key="Go" value="66" />
           <entry key="HTML" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Scratch" value="5" />
+          <entry key="Scratch" value="6" />
           <entry key="x86 Plan9 Assembly" value="1" />
         </counts>
       </usages-collector>
@@ -140,8 +200,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="12" selection-end-line="12" />
+            <state relative-caret-position="60">
+              <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
               <folding>
                 <element signature="e#14#59#0" expanded="true" />
               </folding>
@@ -149,11 +209,56 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/auth/DA/Init.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="29" column="1" lean-forward="true" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controllers/RestApiController.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="86">
+              <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gameServer/TheServer.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="15">
+              <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/5abd7239-1192-466e-be44-380d1b47d92f/console.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="23" selection-start-column="23" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/auth/DA/UserServiceDA.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="562">
+              <caret line="54" selection-start-line="54" selection-end-line="54" />
             </state>
           </provider>
         </entry>
@@ -214,12 +319,12 @@
         <option value="$PROJECT_DIR$/auth/DA/UserServiceDA.go" />
         <option value="$PROJECT_DIR$/auth/services/UserService.go" />
         <option value="$PROJECT_DIR$/auth/DA/HistoryServiceDA.go" />
-        <option value="$PROJECT_DIR$/controllers/RestApiController.go" />
         <option value="$PROJECT_DIR$/auth/models/User.go" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/5abd7239-1192-466e-be44-380d1b47d92f/console.sql" />
         <option value="$PROJECT_DIR$/auth/models/ScoreRecord.go" />
         <option value="$PROJECT_DIR$/main.go" />
         <option value="$PROJECT_DIR$/Dockerfile" />
+        <option value="$PROJECT_DIR$/controllers/RestApiController.go" />
       </list>
     </option>
   </component>
@@ -247,6 +352,38 @@
             <path>
               <item name="IT-Berries_Go_server" type="b2602c69:ProjectViewProjectNode" />
               <item name="IT-Berries_Go_server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IT-Berries_Go_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IT-Berries_Go_server" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IT-Berries_Go_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IT-Berries_Go_server" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="DA" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IT-Berries_Go_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IT-Berries_Go_server" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IT-Berries_Go_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IT-Berries_Go_server" type="462c0819:PsiDirectoryNode" />
+              <item name="avatars" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IT-Berries_Go_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IT-Berries_Go_server" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IT-Berries_Go_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IT-Berries_Go_server" type="462c0819:PsiDirectoryNode" />
+              <item name="gameServer" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -311,10 +448,9 @@
     <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29740188" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30071864" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.37761506" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
@@ -325,8 +461,9 @@
       <window_info anchor="bottom" id="TODO" order="7" weight="0.3294979" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.3294979" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3294979" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32635984" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32635984" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -410,13 +547,6 @@
     <entry file="file://$PROJECT_DIR$/auth/porviders/Provider.go" />
     <entry file="file://$PROJECT_DIR$/auth/porviders/Memory.go" />
     <entry file="file://$PROJECT_DIR$/auth/sessions/Session.go" />
-    <entry file="file://$PROJECT_DIR$/gameServer/TheServer.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="29" column="33" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/go/src/database/sql/sql.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45465">
@@ -445,13 +575,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/5abd7239-1192-466e-be44-380d1b47d92f/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="23" selection-start-column="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/auth/DA/HistoryServiceDA.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="449">
@@ -466,24 +589,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/RestApiController.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
-          <caret line="143" selection-start-line="143" selection-end-line="143" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/auth/services/UserService.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/auth/DA/Init.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -498,13 +607,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/auth/DA/UserServiceDA.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
         </state>
       </provider>
     </entry>
@@ -525,20 +627,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/5abd7239-1192-466e-be44-380d1b47d92f/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="23" selection-start-column="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="12" selection-end-line="12" />
+        <state relative-caret-position="60">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
           <folding>
             <element signature="e#14#59#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/gameServer/TheServer.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auth/DA/UserServiceDA.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auth/DA/Init.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="1" lean-forward="true" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="15">
+          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/RestApiController.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
         </state>
       </provider>
     </entry>

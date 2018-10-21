@@ -14,7 +14,7 @@ import (
 	"strconv"
 )
 
-const avatarPath = "/home/ivan/Park/semest2/front/DZ2/2018_1_IT-Berries/avatars/"
+const avatarPath = "/app/avatars/"
 
 type JSONError struct {
 	Err string `json:"error, string"`

@@ -1,4 +1,5 @@
 FROM golang:latest
+MAINTAINER Ivan Nemshilov
 RUN mkdir /app
 ADD . /app/
 WORKDIR /app
