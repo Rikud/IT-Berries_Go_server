@@ -35,7 +35,7 @@ type LogOutHandle struct {}
 type AvatarHandle struct{}
 
 func (AvatarHandle) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	http.ServeFile(w, r, "/avatar" + string(r.URL.Query()["avatar"][0]))
+	http.ServeFile(w, r, avatarPath + string(r.URL.Query()["avatar"][0]))
 }
 
 type EntryScore struct {

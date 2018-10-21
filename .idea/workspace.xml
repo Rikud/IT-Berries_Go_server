@@ -122,7 +122,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Dockerfile" value="1" />
-          <entry key="go" value="7855" />
+          <entry key="go" value="7867" />
           <entry key="html" value="4" />
           <entry key="sql" value="749" />
           <entry key="txt" value="10" />
@@ -131,7 +131,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Dockerfile" value="1" />
-          <entry key="Go" value="7855" />
+          <entry key="Go" value="7867" />
           <entry key="HTML" value="4" />
           <entry key="PLAIN_TEXT" value="10" />
           <entry key="Scratch" value="749" />
@@ -141,7 +141,7 @@
         <counts>
           <entry key="Dockerfile" value="1" />
           <entry key="dockerfile" value="1" />
-          <entry key="go" value="66" />
+          <entry key="go" value="68" />
           <entry key="html" value="1" />
           <entry key="s" value="1" />
           <entry key="sql" value="6" />
@@ -149,7 +149,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Go" value="66" />
+          <entry key="Go" value="68" />
           <entry key="HTML" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Scratch" value="6" />
@@ -191,17 +191,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/RestApiController.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4616">
-              <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gameServer/TheServer.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+            <state relative-caret-position="60">
+              <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -227,7 +218,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/auth/DA/UserServiceDA.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="562">
+            <state relative-caret-position="720">
               <caret line="54" selection-start-line="54" selection-end-line="54" />
             </state>
           </provider>
@@ -421,20 +412,20 @@
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30071864" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30071864" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.37761506" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.37761506" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.28870293" />
+      <window_info active="true" anchor="bottom" id="Debug" order="4" visible="true" weight="0.28870293" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.3294979" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.3294979" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3294979" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32635984" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32635984" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -506,6 +497,12 @@
           <properties />
           <option name="timeStamp" value="67" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/controllers/RestApiController.go</url>
+          <line>19</line>
+          <properties />
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -554,24 +551,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/auth/DA/HistoryServiceDA.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/auth/services/SessionService.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
           <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/auth/services/UserService.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -623,17 +606,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gameServer/TheServer.go">
+    <entry file="file://$PROJECT_DIR$/auth/DA/UserServiceDA.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+        <state relative-caret-position="720">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/auth/DA/UserServiceDA.go">
+    <entry file="file://$PROJECT_DIR$/auth/services/UserService.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        <state relative-caret-position="255">
+          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameServer/TheServer.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="29" column="32" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -641,6 +631,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="29" column="1" lean-forward="true" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auth/DA/HistoryServiceDA.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
         </state>
       </provider>
     </entry>
@@ -653,8 +650,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/RestApiController.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4616">
-          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+        <state relative-caret-position="60">
+          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
         </state>
       </provider>
     </entry>
