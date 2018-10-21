@@ -191,8 +191,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/RestApiController.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="373" column="33" selection-start-line="373" selection-start-column="33" selection-end-line="373" selection-end-column="33" />
+            <state relative-caret-position="-4616">
+              <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -500,6 +500,12 @@
           <line>47</line>
           <option name="timeStamp" value="66" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/controllers/RestApiController.go</url>
+          <line>37</line>
+          <properties />
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -647,8 +653,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/RestApiController.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="373" column="33" selection-start-line="373" selection-start-column="33" selection-end-line="373" selection-end-column="33" />
+        <state relative-caret-position="-4616">
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
         </state>
       </provider>
     </entry>
