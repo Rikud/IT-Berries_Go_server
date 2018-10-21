@@ -1,5 +1,7 @@
 package DA
 
+import "IT-Berries_Go_server/auth/models"
+
 func GetBestScoreForUserById(userId int) int {
 	db := connect()
 	defer db.Close()
@@ -20,4 +22,23 @@ func GetBestScoreForUserById(userId int) int {
 	} else {
 		return 0
 	}
+}
+
+func GetScoreBoardData() []*models.ScoreRecord {
+	db := connect()
+	defer db.Close()
+	rows, err := db.Query("select u.user_name, max(h.score) as score "+
+		"from History h , Users u where u.user_id = h.user_id group by u.user_name order by score desc")
+	errorCheck(err, executeError)
+	defer rows.Close()
+	scoreRecords := make([]*models.ScoreRecord, 0)
+	for i := 0; rows.Next(); i++ {
+		scoreRecord:= new(models.ScoreRecord)
+		err := rows.Scan(scoreRecord.GetUsernamePoint(), scoreRecord.GetScorePoint())
+		scoreRecord.SetId(i + 1)
+		errorCheck(err, readRowError)
+		scoreRecords = append(scoreRecords, scoreRecord)
+	}
+	errorCheck(rows.Err(), readRowError)
+	return scoreRecords
 }

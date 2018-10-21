@@ -11,15 +11,10 @@ import (
 	"net/http"
 	"os"
 	"regexp"
+	"strconv"
 )
 
-var notSafeMethod = []byte(`
-<html>
-	<body>
-	[Error]: not safe method, use POST for send personal data
-	</body>
-</html>
-`)
+const avatarPath = "/home/ivan/Park/semest2/front/DZ2/2018_1_IT-Berries/avatars/"
 
 type JSONError struct {
 	Err string `json:"error, string"`
@@ -37,6 +32,10 @@ type RegistrationHandle struct{}
 type MeHandle struct{}
 type ScoreboardHandle struct{}
 type LogOut struct {}
+type EntryScore struct {
+	Scorelist []*models.ScoreRecord `json:"scorelist"`
+	Length int `json:"length"`
+}
 
 func (handle LogOut) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	defer func() {
@@ -142,7 +141,7 @@ func (handle RegistrationHandle) ServeHTTP(w http.ResponseWriter, r *http.Reques
 
 	avatarName := username + "_avatar"
 	if avatarFile != nil && avatarHeader.Filename != "" {
-		avatarSave, err := os.OpenFile("/home/ivan/Park/semest2/front/DZ2/2018_1_IT-Berries/" + avatarName, os.O_WRONLY|os.O_CREATE, 0666)
+		avatarSave, err := os.OpenFile(avatarPath + avatarName, os.O_WRONLY|os.O_CREATE, 0666)
 		if err != nil {
 			log.Println("Save avatar error!")
 			return
@@ -155,7 +154,7 @@ func (handle RegistrationHandle) ServeHTTP(w http.ResponseWriter, r *http.Reques
 	user.SetPassword(encoder.HashPassword(password))
 	user.SetUsername(username)
 	user.SetAvatar(avatarName)
-	services.SaveUser(*user)
+	services.AddUser(*user)
 	log.Println("Register success!")
 	result, _ := json.Marshal(user)
 	fmt.Fprint(w, string(result))
@@ -178,10 +177,8 @@ func (handll MeHandle) authentication(w http.ResponseWriter, r *http.Request) {
 		}
 	}()
 	log.Println("Trying to authenticate user.")
-	cookie, err := r.Cookie(services.CookieName)
-	if err != nil || cookie.Value == "" {
-		log.Println("The user isn't authorized!")
-		errorResponce(w, "The user isn't authorized!", http.StatusUnauthorized)
+	cookie := checkAuth(r, w)
+	if cookie == nil {
 		return
 	}
 	user := services.GetUserBySessionId(cookie.Value)
@@ -198,10 +195,129 @@ func (handll MeHandle) authentication(w http.ResponseWriter, r *http.Request) {
 
 func (handle MeHandle) profileChange(w http.ResponseWriter, r *http.Request) {
 	log.Println("Trying to change user profile data.")
+	defer func() {
+		if rec := recover(); rec != nil {
+			log.Println("Registration failed.", rec)
+			w.WriteHeader(http.StatusInternalServerError)
+		}
+	}()
+	if !checkMethod(w, r) {return}
+	cookie := checkAuth(r, w)
+	if cookie == nil {
+		return
+	}
+	currentUser := services.GetUserBySessionId(cookie.Value)
+	password := r.FormValue("current_password")
+	if !encoder.ComparePasswords(currentUser.GetPassword(), password) {
+		log.Println("Wrong password")
+		errorResponce(w, "Wrong email or password!", http.StatusBadRequest)
+	}
+	username := r.FormValue("username")
+	if username != "" && username != currentUser.GetUsername() {
+		currentUser.SetUsername(username)
+	}
+	email := r.FormValue("email")
+	if email != "" && email != currentUser.GetEmail() {
+		check, err := regexp.MatchString("(.*)@(.*)", email)
+		if err != nil {
+			log.Println("Email matching error")
+			errorResponce(w, "Specify a valid e-mail!", http.StatusBadRequest)
+			return
+		}
+		if !check {
+			log.Println("Not correct email!")
+			errorResponce(w, "Specify a valid e-mail!", http.StatusBadRequest)
+			return
+		}
+		if services.FindUserByEmail(email) != nil {
+			log.Println("User with this email already exists!")
+			errorResponce(w, "User with this email already exists!", http.StatusConflict)
+			return
+		}
+		currentUser.SetEmail(email)
+	}
+
+	newPassword := r.FormValue("new_password")
+	if newPassword != "" {
+		if len(newPassword) < 4 {
+			log.Println("Wrong password length")
+			errorResponce(w, "The password field must contain more than 4 characters!", http.StatusBadRequest)
+			return
+		}
+		repPassword := r.FormValue("new_password_repeat")
+		if repPassword == "" || repPassword != newPassword {
+			log.Println("Passwords do not match")
+			errorResponce(w, "Repeat password correctly!", http.StatusBadRequest)
+			return
+		}
+		currentUser.SetPassword(encoder.HashPassword(newPassword))
+	}
+
+	r.ParseMultipartForm(32 << 20)
+	avatarFile, avatarHeader, err := r.FormFile("avatar")
+	if err != nil{
+		log.Println("Error reading avatar file!", err)
+	} else {
+		defer avatarFile.Close()
+		if avatarFile != nil && avatarHeader.Filename != "" {
+			avatarName := username + "_avatar"
+			if err != nil {
+				log.Println("Create avatar path", err)
+				return
+			}
+			avatarSave, err := os.OpenFile(avatarPath + avatarName, os.O_WRONLY|os.O_CREATE, 0666)
+			if err != nil {
+				log.Println("Save avatar error!", err)
+				return
+			}
+			defer avatarSave.Close()
+			io.Copy(avatarSave, avatarFile)
+			currentUser.SetAvatar(avatarName)
+		}
+	}
+
+	services.SaveUser(*currentUser)
+	log.Println("Successful user data change!")
+	result, _ := json.Marshal(currentUser)
+	fmt.Fprint(w, string(result))
+	w.WriteHeader(http.StatusOK)
 }
 
 func (handle ScoreboardHandle) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, "Leaderboard", r.URL.String())
+	page, err := strconv.Atoi(r.FormValue("listNumber"))
+	if err != nil {
+		log.Println("Page value not int")
+		errorResponce(w, "Page value not int!", http.StatusBadRequest)
+		return
+	}
+	size, err := strconv.Atoi(r.FormValue("listSize"))
+	if err != nil {
+		log.Println("Page value not int")
+		errorResponce(w, "Page value not int!", http.StatusBadRequest)
+		return
+	}
+	if err != nil {
+		log.Println("Page value not int")
+		errorResponce(w, "Page value not int!", http.StatusBadRequest)
+		return
+	}
+	if (page < 1) {
+		log.Println("Page value < 1")
+		errorResponce(w, "This sheet may not be formed!", http.StatusBadRequest)
+		return
+	}
+	startPosition := (page - 1) * size
+	usersForScoreBoard := services.FindAllUsersForScoreBoard()
+	var numericResult []*models.ScoreRecord
+	if len(usersForScoreBoard) < startPosition {
+		numericResult = usersForScoreBoard[startPosition:]
+	} else {
+		numericResult = usersForScoreBoard[startPosition:startPosition+len(usersForScoreBoard)]
+	}
+	ScoreBoardData := EntryScore{numericResult, len(usersForScoreBoard)}
+	result, _ := json.Marshal(ScoreBoardData)
+	fmt.Fprint(w, string(result))
+	w.WriteHeader(http.StatusOK)
 }
 
 func init() {
@@ -215,8 +331,7 @@ func init() {
 
 func checkMethod(w http.ResponseWriter, r *http.Request) bool {
 	if r.Method != http.MethodPost {
-		w.Write(notSafeMethod)
-		//TODO write coorect redirect fo this request;
+		errorResponce(w, "method error", http.StatusBadRequest)
 		return false
 	}
 	return true
@@ -235,6 +350,16 @@ func AccessControl(h http.Handler) http.Handler {
 
 		h.ServeHTTP(w, r)
 	})
+}
+
+func checkAuth(r *http.Request, w http.ResponseWriter) *http.Cookie {
+	cookie, err := r.Cookie(services.CookieName)
+	if err != nil || cookie.Value == "" {
+		log.Println("The user isn't authorized!")
+		errorResponce(w, "The user isn't authorized!", http.StatusUnauthorized)
+		return nil
+	}
+	return cookie
 }
 
 func errorResponce(w http.ResponseWriter,  errorMessage string, errorStatus int) {

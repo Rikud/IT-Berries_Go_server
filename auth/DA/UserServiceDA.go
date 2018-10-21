@@ -5,6 +5,7 @@ import (
 	"database/sql"
 	_ "github.com/lib/pq"
 	"log"
+	"time"
 )
 
 func FindUserByEmail(email string) []*models.User {
@@ -44,7 +45,24 @@ func FindUserById(userId int) []*models.User {
 func AddUser(user models.User) int64 {
 	db := connect()
 	defer db.Close()
-	result, err := db.Exec("insert into users (avatar, email, password, user_name) values ($1, $2, $3, $4)",
+	result, err := db.Query("insert into users (avatar, email, password, user_name) values ($1, $2, $3, $4) RETURNING user_id",
+		user.GetAvatar(), user.GetEmail(), user.GetPassword(), user.GetUsername())
+	errorCheck(err, executeError)
+	defer result.Close()
+	var id int64
+	result.Next()
+	err = result.Scan(&id)
+	errorCheck(err, idExtracionError)
+	_, err = db.Exec("insert into history (date_result, score, user_id) values ($1, $2, $3)",
+		time.Now(), 0, id)
+	errorCheck(err, executeError)
+	return id
+}
+
+func SaveUser(user models.User) int64 {
+	db :=connect()
+	defer db.Close()
+	result, err := db.Exec("UPDATE users SET avatar = $1, email = $2, password = $3, user_name = $4",
 		user.GetAvatar(), user.GetEmail(), user.GetPassword(), user.GetUsername())
 	errorCheck(err, executeError)
 	id, err := result.RowsAffected()

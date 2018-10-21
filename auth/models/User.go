@@ -49,6 +49,10 @@ func (user *User) GetAvatar() string {
 	return user.Avatar
 }
 
+func (user *User) SetId(id int) {
+	user.Id = id
+}
+
 func (user *User) SetEmail(email string) {
 	user.Email = email
 }
